@@ -1,4 +1,4 @@
-<!--&lt;!&ndash; finance_app/templates/result.html &ndash;&gt;-->
+<!-- finance_app/templates/result.html -->
 
 <!--<!DOCTYPE html>-->
 <!--<html>-->
@@ -11,3 +11,136 @@
 <!--    <a href="{% url 'upload' %}">Upload New File</a>-->
 <!--</body>-->
 <!--</html>-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2><i class="fas fa-chart-line"></i> Analysis Results</h2>
+
+        <ul class="results-list">
+            <li class="result-item">
+                <span class="result-key">
+                    <i class="fas fa-chart-bar"></i>
+                    TOTAL_REVENUE_5CR_FLAG
+                </span>
+                <span class="result-value">0</span>
+            </li>
+            <li class="result-item">
+                <span class="result-key">
+                    <i class="fas fa-money-bill-wave"></i>
+                    BORROWING_TO_REVENUE_FLAG
+                </span>
+                <span class="result-value">2</span>
+            </li>
+            <li class="result-item">
+                <span class="result-key">
+                    <i class="fas fa-flag"></i>
+                    ISCR_FLAG
+                </span>
+                <span class="result-value">1</span>
+            </li>
+        </ul>
+
+        <a href="/" class="upload-btn">
+            <i class="fas fa-upload"></i>
+            Upload New File
+        </a>
+    </div>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        h2 {
+            color: #2193b0;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+        h2 i {
+            margin-right: 10px;
+        }
+        .results-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .result-item {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s ease;
+        }
+        .result-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        .result-key {
+            font-weight: 500;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .result-key i {
+            color: #2193b0;
+        }
+        .result-value {
+            font-weight: bold;
+            color: #fff;
+            background-color: #2193b0;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            min-width: 40px;
+            text-align: center;
+        }
+        .upload-btn {
+            display: inline-block;
+            background-color: #2193b0;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            width: 100%;
+            text-align: center;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s ease;
+            box-sizing: border-box;
+        }
+        .upload-btn:hover {
+            background-color: #1a7b8f;
+        }
+        .upload-btn i {
+            margin-right: 8px;
+        }
+    </style>
+</body>
+</html>
